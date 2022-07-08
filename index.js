@@ -13,6 +13,10 @@ app.get((req, res) => {
 	});
 });
 
+app.get("/", (req, res) => {
+	res.status(200).json({ message: "You are welcome to One Church Network" });
+});
+
 app.use("/api/organisation", require("./routers/organisationRouter"));
 app.use("/api/member", require("./routers/memberRouter"));
 app.use("/api/job", require("./routers/jobRouter"));
